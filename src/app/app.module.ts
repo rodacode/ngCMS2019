@@ -35,7 +35,7 @@ import { UserTopBarComponent } from './components/user-top-bar/user-top-bar.comp
     UserTopBarComponent
   ],
   imports: [
-    BrowserModule,
+    BrowserModule.withServerTransition({ appId: 'serverApp' }),
     AppRoutingModule,
     BrowserAnimationsModule,
     MaterialModule,

@@ -1,4 +1,3 @@
-import 'hammerjs';
 import { NgModule } from '@angular/core';
 import {MatSidenavModule} from '@angular/material/sidenav';
 import { MatSelectModule } from '@angular/material/select';
