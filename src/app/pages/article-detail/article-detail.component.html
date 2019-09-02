@@ -1,0 +1,21 @@
+<div *ngIf="article" class="container">
+    <mat-card class="article__card">
+        <mat-card-header fxLayoutAlign="center">
+            <mat-card-title>{{article.title}}</mat-card-title>
+        </mat-card-header>
+        <mat-card-content fxLayoutAlign="space-between" fxLayout.gt-xs="row" fxLayout.xs="column">
+            <div fxFlex="40%" class="article__card__image">
+                <img mat-card-image [src]="article.image" alt="{{article.title}}">
+            </div>
+            <div fxFlex="50%" class="article__card__text">
+                <p>{{article.content}}</p>
+                <p *ngIf="article.date">DATE: {{article.date}}</p>
+                <p *ngIf="article.tags">TAGS: {{article.tags}}</p>
+                <div class="backtoArticles">
+                    <button mat-stroked-button color="primary" routerLink="/">Back to Articles</button>
+                </div>
+            </div>
+        </mat-card-content>
+    </mat-card>
+
+</div>

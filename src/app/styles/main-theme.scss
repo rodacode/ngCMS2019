@@ -1,0 +1,85 @@
+$theme-primary: (
+  50: $color-primary,
+  100: $color-primary,
+  200: $color-primary,
+  300: $color-primary,
+  400: $color-primary,
+  500: $color-primary,
+  600: $color-primary,
+  700: $color-primary,
+  800: $color-primary,
+  900: $color-primary,
+  contrast: (
+    50: white,
+    100: white,
+    200: white,
+    300: white,
+    400: white,
+    500: white,
+    600: white,
+    700: white,
+    800: white,
+    900: white
+  )
+);
+
+$theme-secondary: (
+  50: $color-secondary,
+  100: $color-secondary,
+  200: $color-secondary,
+  300: $color-secondary,
+  400: $color-secondary,
+  500: $color-secondary,
+  600: $color-secondary,
+  700: $color-secondary,
+  800: $color-secondary,
+  900:  $color-secondary,
+  contrast: (
+    50: white,
+    100: white,
+    200: white,
+    300: white,
+    400: white,
+    500: white,
+    600: white,
+    700: white,
+    800: white,
+    900: white,
+  )
+);
+
+$theme-warning: (
+  50: $color-warning,
+  100: $color-warning,
+  200: $color-warning,
+  300: $color-warning,
+  400: $color-warning,
+  500: $color-warning,
+  600: $color-warning,
+  700: $color-warning,
+  800: $color-warning,
+  900: $color-warning,
+  contrast: (
+    50: white,
+    100: white,
+    200: white,
+    300: white,
+    400: white,
+    500: white,
+    600: white,
+    700: white,
+    800: white,
+    900: white,
+  )
+);
+// mat-palette accepts $palette-name, main, lighter and darker variants
+$theme-primary: mat-palette($theme-primary, 500);
+$theme-secondary: mat-palette($theme-secondary, 500);
+$theme-warning: mat-palette($theme-warning, 500);
+
+// create theme (use mat-dark-theme for themes with dark backgrounds)
+$main-theme: mat-light-theme(
+    $theme-primary,
+    $theme-secondary,
+    $theme-warning
+);

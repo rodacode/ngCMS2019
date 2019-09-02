@@ -1,1 +1,30 @@
-/* You can add global styles to this file, and also import other style files */
+//Fonts
+@import url('https://fonts.googleapis.com/css?family=Roboto&display=swap');
+@import url('https://fonts.googleapis.com/css?family=Overlock&display=swap');
+
+@import "~@angular/material/prebuilt-themes/indigo-pink.css";
+
+@import "./app/styles/__index.scss";
+
+@import '~@angular/material/theming';
+
+@include mat-core();
+
+@import './src/app/styles/main-theme.scss';
+
+@include angular-material-theme($main-theme);
+
+
+html {
+    font-family: 'Roboto', sans-serif;
+}
+body {
+    background-color: $color-background;
+}
+
+p {
+    line-height: 1.25;
+}
+.container {
+    padding: 0 10px;
+}

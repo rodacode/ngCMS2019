@@ -1,0 +1,16 @@
+<div class="container">
+    <mat-card *ngFor="let article of articles" class="article__card">
+        <mat-card-header fxLayoutAlign="center">
+            <mat-card-title>{{article.data.title}}</mat-card-title>
+        </mat-card-header>
+        <mat-card-content fxLayoutAlign="space-between" fxLayout.gt-xs="row" fxLayout.xs="column">
+            <div fxFlex="40%" class="article__card__image">
+                <img mat-card-image [src]="article.data.image" alt="{{article.data.title}}">
+            </div>
+            <div fxFlex="50%" class="article__card__text">
+                <p>{{article.data.content}}</p>
+                <button mat-stroked-button color="primary" [routerLink]="['/articles', article.id]">Read more...</button>
+            </div>
+        </mat-card-content>
+    </mat-card>
+</div>

@@ -1,6 +1,5 @@
+import 'hammerjs';
 import { NgModule } from '@angular/core';
-import { CommonModule } from '@angular/common';
-import 'rxjs/add/operator/map';
 import {MatSidenavModule} from '@angular/material/sidenav';
 import { MatSelectModule } from '@angular/material/select';
 import {
