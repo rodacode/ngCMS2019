@@ -1,10 +1,30 @@
 import { Component, OnInit } from '@angular/core';
 import { DataService } from '../../services/data.service';
+import {
+  trigger,
+  state,
+  style,
+  animate,
+  transition,
+  query,
+  stagger
+} from '@angular/animations';
 
 @Component({
   selector: 'articles-list',
   templateUrl: './articles-list.component.html',
-  styleUrls: ['./articles-list.component.scss']
+  styleUrls: ['./articles-list.component.scss'],
+  animations: [
+    trigger('photosAnimation', [
+      transition('* => *', [
+        query('mat-card',style({ transform: 'translateX(-100%)'})),
+        query('mat-card',
+          stagger('200ms', [
+            animate('600ms', style({ transform: 'translateX(0)'}))
+        ]))
+      ])
+    ])
+  ]
 })
 export class ArticlesListComponent implements OnInit {
 

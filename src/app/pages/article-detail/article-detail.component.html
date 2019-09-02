@@ -1,5 +1,5 @@
 <div *ngIf="article" class="container">
-    <mat-card class="article__card">
+    <mat-card [@fadeIn]=true class="article__card">
         <mat-card-header fxLayoutAlign="center">
             <mat-card-title>{{article.title}}</mat-card-title>
         </mat-card-header>

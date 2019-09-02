@@ -9,11 +9,30 @@ import { tap, startWith, switchMap } from 'rxjs/operators';
 import { Observable } from 'rxjs';
 import { Router, ActivatedRoute, ParamMap } from '@angular/router';
 import { SeoService } from '../../services/seo.service';
+import {
+  trigger,
+  state,
+  style,
+  animate,
+  transition
+} from '@angular/animations';
 
 @Component({
   selector: 'app-article-detail',
   templateUrl: './article-detail.component.html',
-  styleUrls: ['./article-detail.component.scss']
+  styleUrls: ['./article-detail.component.scss'],
+  animations: [
+    trigger('fadeIn',  [
+      state('in', style({ opacity: 0 })),
+      transition('void => *', [
+        style({ opacity: 0 }),
+        animate(600)
+      ]),
+      transition('* => void', [
+        animate(600, style({ opacity: 1 }))
+      ])
+    ])
+  ]
 })
 export class ArticleDetailComponent implements OnInit {
   article: any;
