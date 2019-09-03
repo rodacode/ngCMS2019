@@ -1,6 +1,7 @@
 import { Injectable } from '@angular/core';
 import { AngularFirestore, AngularFirestoreDocument } from 'angularfire2/firestore';
 import { Observable } from 'rxjs';
+import { Article } from '../models/article';
 
 @Injectable({
   providedIn: 'root'
@@ -12,7 +13,7 @@ export class DataService {
   ) { }
 
   //Create Article
-  public createArticle(data: {nombre: string, url: string}) {
+  public createArticle(data: {nombre: string, url: string}){
     return this.db.collection('articles').add(data);
   }
   //Get Article

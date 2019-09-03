@@ -1,0 +1,42 @@
+<button mat-raised-button color="primary" ng-model="showForm" ng-init="showForm" (click)="showForm = !showForm"
+    class="new-article">New Article</button>
+<div *ngIf="showForm" class="new-article-container">
+    <mat-card class="form-card">
+        <div class="form-container">
+            <h3 class="text-center">Add new article</h3>
+            <form [formGroup]="form" (ngSubmit)="onSubmit()" class="form" novalidate>
+                <mat-form-field class="title">
+                    <input matInput placeholder="title" formControlName="title">
+                    <mat-error align="start" *ngIf="invalid && (dirty || touched)" class="form__error">title is invalid
+                    </mat-error>
+                </mat-form-field>
+                <mat-form-field class="category">
+                    <input matInput placeholder="category" formControlName="category">
+                    <mat-error align="start" *ngIf="invalid" class="form__error">category is invalid</mat-error>
+                </mat-form-field>
+                <mat-form-field class="content">
+                    <input matInput placeholder="content" formControlName="content">
+                    <mat-error align="start" *ngIf="invalid" class="form__error">{{ formErrors.content }}</mat-error>
+                </mat-form-field>
+                <mat-form-field class="image">
+                    <input matInput placeholder="image" formControlName="image">
+                    <mat-error align="start" *ngIf="invalid" class="form__error">{{ formErrors.password }}</mat-error>
+                </mat-form-field>
+                <br>
+                <button mat-raised-button type="submit">Add article</button>
+            </form>
+        </div>
+    </mat-card>
+</div>
+
+<mat-card class="form-card">
+    <h2>Articles</h2>
+    <div class="back-list">
+        <ul>
+            <li *ngFor="let article  of articles">
+                <h4>{{article.data.title}}</h4>
+                <p class="content__article">{{article.data.content}}</p>
+            </li>
+        </ul>
+    </div>
+</mat-card>

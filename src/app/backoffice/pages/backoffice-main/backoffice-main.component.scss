@@ -1,0 +1,36 @@
+@import '../../../styles/variables';
+
+.backoffice__container{
+    width:100%;
+    height: 100%;
+    background-color: $color-background;
+    color: $color-topbar-background;
+
+}
+.backoffice__sidenav{
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+}
+.mat-drawer-container{
+    height: 100%!important;
+}
+.sidemenu {
+    margin-top: 60px;
+    color: $color-topbar-background;
+}
+.mat-button{
+    color: $color-topbar-background;
+ }
+.mat-toolbar {
+    background-color: $color-topbar-background;
+    color: #fff;
+}
+.menu__icon{
+    color: #fff!important;
+}
+.sidenav-button{
+    color: $color-topbar-background;
+}

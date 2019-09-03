@@ -17,6 +17,9 @@ import { AngularFireModule } from 'angularfire2';
 import { AngularFirestore } from 'angularfire2/firestore';
 import { environment } from '../environments/environment';
 
+// BACKOFFICE MODULE
+import { BackofficeModule } from './backoffice/backoffice.module';
+
 // COMPONENTS
 import { AppComponent } from './app.component';
 import { ArticlesListComponent } from './components/articles-list/articles-list.component';
@@ -40,7 +43,8 @@ import { UserTopBarComponent } from './components/user-top-bar/user-top-bar.comp
     BrowserAnimationsModule,
     MaterialModule,
     FlexLayoutModule,
-    AngularFireModule.initializeApp(environment.firebaseConfig)
+    AngularFireModule.initializeApp(environment.firebaseConfig),
+    BackofficeModule 
   ],
   providers: [AngularFirestore],
   bootstrap: [AppComponent]

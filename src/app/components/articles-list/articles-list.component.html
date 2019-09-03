@@ -1,4 +1,4 @@
-<div [@photosAnimation]="articles.length" class="container">
+<div *ngIf="articles" [@photosAnimation]="articles.length" class="container">
     <mat-card *ngFor="let article of articles" class="article__card">
         <mat-card-header fxLayoutAlign="center">
             <mat-card-title>{{article.data.title}}</mat-card-title>
